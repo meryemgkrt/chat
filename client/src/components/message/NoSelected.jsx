@@ -8,6 +8,7 @@ const NoSelected = () => {
         <p>Welcom 👋 Mery❄</p>
         <p>Start a chat with your friends</p>
         <TiMessages className="md:text-6xl text-[#003d50] text-3xl text-center" />
+        <p>M</p>
       </div>
     </div>
   );
