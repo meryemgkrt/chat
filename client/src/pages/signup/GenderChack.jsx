@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaFemale, FaMale } from "react-icons/fa";
 
-const GenderCheckbox = () => {
-  const [selectedGender, setSelectedGender] = useState(null); // Başlangıçta hiçbir cinsiyet seçili değil
+const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
+  const [gender, setGender] = useState(selectedGender || null);
+
+  useEffect(() => {
+    setGender(selectedGender);
+  }, [selectedGender]);
 
   const handleFemaleSelect = () => {
-    setSelectedGender("female"); // Kadın seçildiğinde erkek checkboxını devre dışı bırakır
+    setGender("female");
+    onCheckboxChange("female"); // Signup bileşenine "female" değerini gönderir
   };
 
   const handleMaleSelect = () => {
-    setSelectedGender("male"); // Erkek seçildiğinde kadın checkboxını devre dışı bırakır
+    setGender("male");
+    onCheckboxChange("male"); // Signup bileşenine "male" değerini gönderir
   };
 
   return (
@@ -20,11 +26,11 @@ const GenderCheckbox = () => {
         <div className="relative flex justify-center items-center">
           <input
             type="checkbox"
-            checked={selectedGender === "female"}
+            checked={gender === "female"}
             onChange={handleFemaleSelect}
             className="appearance-none h-6 w-6 bg-[#022833] checked:bg-[#022833] rounded focus:outline-none"
           />
-          {selectedGender === "female" && (
+          {gender === "female" && (
             <FaFemale className="absolute inset-0 m-auto text-pink-400 text-lg" />
           )}
         </div>
@@ -36,11 +42,11 @@ const GenderCheckbox = () => {
         <div className="relative flex justify-center items-center">
           <input
             type="checkbox"
-            checked={selectedGender === "male"}
+            checked={gender === "male"}
             onChange={handleMaleSelect}
             className="appearance-none h-6 w-6 bg-[#022833] checked:bg-[#022833] rounded focus:outline-none"
           />
-          {selectedGender === "male" && (
+          {gender === "male" && (
             <FaMale className="absolute inset-0 m-auto text-blue-500 text-lg" />
           )}
         </div>

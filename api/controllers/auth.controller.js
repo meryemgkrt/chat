@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const User = require("../models/user.model.js");
 const generateTokenAndSentCookie = require("../utils/generateToken.js");
 
-const singup = async (req, res) => {
+const signup = async (req, res) => {
   try {
     const { fullName, username, password, confirmPassword, gender } = req.body;
 
@@ -84,7 +84,7 @@ const logout = (req, res) => {
 };
 
 module.exports = {
-  singup,
+  signup,
   login,
   logout,
 };

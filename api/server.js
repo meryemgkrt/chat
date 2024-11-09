@@ -9,7 +9,8 @@ const userRoutes = require("./routes/user.routes.js");
 const app = express();
 const port = process.env.PORT || 5000;
 
-dotenv.config();
+require("dotenv").config();
+
 
 app.use(express.json());//to parse the incoming request with JSON payload
 app.use(cookieParser());//to parse the incoming request cookies
