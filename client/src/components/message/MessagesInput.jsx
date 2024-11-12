@@ -29,7 +29,7 @@ const MessagesInput = () => {
           className="absolute inset-y-0 right-0 flex items-center pr-3"
           disabled={loading} // Loading durumunda buton devre dışı bırakılır
         >
-          {loading ? <div className="loading loading-spinner"></div> : <MdSend className="text-white" />}
+          {loading ? <div className="loading loading-spinner">mkm</div> : <MdSend className="text-white" />}
         </button>
       </div>
     </form>
