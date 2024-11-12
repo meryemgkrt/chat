@@ -22,6 +22,7 @@ const Signup = () => {
     e.preventDefault();
     await signup(formData);
   };
+  console.log(formData);
 
   return (
     <div className="flex items-center justify-center h-screen overflow-x-hidden">

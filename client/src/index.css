@@ -11,11 +11,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.sidebar{
-    min-width: 300px;
-}
-
-
+/* dark mode looking scrollbar */
 ::-webkit-scrollbar {
 	width: 8px;
 }

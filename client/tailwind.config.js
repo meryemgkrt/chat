@@ -8,7 +8,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('daisyui'),
+    require('daisyui'),       // DaisyUI eklentisini ayrı bir require olarak ekledik
+    require('tailwind-scrollbar'), // Tailwind scrollbar eklentisini ayrı bir require olarak ekledik
   ],
   daisyui: {
     themes: [
@@ -24,23 +25,20 @@ module.exports = {
           "warning": "#fbbf24",
           "error": "#ef4444",
           "purpleMix": "#800080",
-          "navy":"#000b58",
-          "navyMix":"#091057",
-          "navyMixx":"#210062",
-          "navyMixxx":"#211951",
-          "darkMix":"#0f172a",
-          "lightMix":"#f0f4f8",
-          "darkGray":"#333333",
-          "blueMix":"#024caa",
-          "orangeMix":"#ec8305",
-          "night":"#006a67",
-          
-          // Mor tonlarında bir renk ekledik
+          "navy": "#000b58",
+          "navyMix": "#091057",
+          "navyMixx": "#210062",
+          "navyMixxx": "#211951",
+          "darkMix": "#0f172a",
+          "lightMix": "#f0f4f8",
+          "darkGray": "#333333",
+          "blueMix": "#024caa",
+          "orangeMix": "#ec8305",
+          "night": "#006a67",
         },
       },
       "light",
       "dark",
     ],
   },
-  
 }
