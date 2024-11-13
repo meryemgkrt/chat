@@ -3,11 +3,11 @@ import { createContext, useContext, useState } from "react";
 export const AuthContext = createContext();
 
 export const useAuthContext = () => {
-    return useContext(AuthContext);
-  };
-  
+  return useContext(AuthContext);
+};
 
-export const AuthContextProvider = ({ children }) => { // "AuthConstextProvider" yerine "AuthContextProvider"
+export const AuthContextProvider = ({ children }) => {
+  // "AuthConstextProvider" yerine "AuthContextProvider"
   const [authUser, setAuthUser] = useState(
     JSON.parse(localStorage.getItem("chat-user")) || null
   );
