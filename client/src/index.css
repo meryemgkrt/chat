@@ -28,3 +28,22 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background: #242424;
 }
+
+.skeleton {
+    background-color: #e0e0e0; /* Açık gri arka plan */
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Basit bir iskelet animasyonu */
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
