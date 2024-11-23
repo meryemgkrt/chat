@@ -132,7 +132,7 @@ const Sidebar = () => {
                 <FiArrowUpLeft size={50} />
               </div>
               <p className="text-lg text-center text-slate-400">
-                Explore users to start a conversation with.
+                Explore users to start a conversation withh.
               </p>
             </div>
           ) : (
